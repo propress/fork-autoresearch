@@ -9,7 +9,7 @@
 | 3 | 数据准备与加载：从原始文本到训练张量 | ch03-data-pipeline.md | 数据下载 / BPE 分词器训练 / best-fit packing 数据加载器 / BPB 评估指标 | | ✅ |
 | 4 | GPT 模型架构：每一层在做什么 | ch04-model.md | GPTConfig / RoPE 旋转位置编码 / QK-Norm / Value Embedding / 滑动窗口注意力 / ReLU² MLP / 残差缩放 / logit softcap | 同类对比：nanochat/nanoGPT 架构选择 | ✅ |
 | 5 | MuonAdamW 优化器：矩阵参数的特殊待遇 | ch05-optimizer.md | Muon 正交化（Polar Express）/ NorMuon 方差缩减 / AdamW 融合 / 分组学习率策略 / cautious weight decay | 同类对比：标准 AdamW vs Muon | ✅ |
-| 6 | 训练循环与调度策略 | ch06-training-loop.md | 时间预算控制 / 梯度累积 / LR warmup-cooldown / momentum 调度 / GC 管理 / 快速失败检查 | | ⏳ |
+| 6 | 训练循环与调度策略 | ch06-training-loop.md | 时间预算控制 / 梯度累积 / LR warmup-cooldown / momentum 调度 / GC 管理 / 快速失败检查 | | ✅ |
 | 7 | Agent 协议与 Prompt 设计 | ch07-agent-protocol.md | program.md 作为 prompt 的完整分析 / 实验循环协议 / keep/discard 决策 / 分析笔记本 | prompt 分析 | ⏳ |
 | 8 | 项目演进史：从初始提交到当前形态 | ch08-evolution.md | 35 个 commit 的里程碑式演进 / 设计决策的时间线 / 架构从简到繁的过程 | | ⏳ |
 | 9 | 端到端追踪：跟着一次训练走完全程 | ch09-end-to-end.md | 从 `uv run train.py` 启动到 val_bpb 输出的逐行追踪，串联全书知识 | | ⏳ |
@@ -60,7 +60,7 @@
 
 ## 下次续写指引
 ### 从哪里继续
-从 ch06 开始写作
+从 ch07 开始写作
 
 ### 交接备忘
 - 项目只有 3 个核心文件：prepare.py (389行)、train.py (630行)、program.md (114行)
