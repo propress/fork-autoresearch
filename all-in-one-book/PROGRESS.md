@@ -12,7 +12,7 @@
 | 6 | 训练循环与调度策略 | ch06-training-loop.md | 时间预算控制 / 梯度累积 / LR warmup-cooldown / momentum 调度 / GC 管理 / 快速失败检查 | | ✅ |
 | 7 | Agent 协议与 Prompt 设计 | ch07-agent-protocol.md | program.md 作为 prompt 的完整分析 / 实验循环协议 / keep/discard 决策 / 分析笔记本 | prompt 分析 | ✅ |
 | 8 | 项目演进史：从初始提交到当前形态 | ch08-evolution.md | 35 个 commit 的里程碑式演进 / 设计决策的时间线 / 架构从简到繁的过程 | | ✅ |
-| 9 | 端到端追踪：跟着一次训练走完全程 | ch09-end-to-end.md | 从 `uv run train.py` 启动到 val_bpb 输出的逐行追踪，串联全书知识 | | ⏳ |
+| 9 | 端到端追踪：跟着一次训练走完全程 | ch09-end-to-end.md | 从 `uv run train.py` 启动到 val_bpb 输出的逐行追踪，串联全书知识 | | ✅ |
 
 ## 章节规划说明
 
@@ -60,15 +60,16 @@
 
 ## 下次续写指引
 ### 从哪里继续
-从 ch09 开始写作
+全书 9 章已完成。
 
 ### 交接备忘
-- 项目只有 3 个核心文件：prepare.py (389行)、train.py (630行)、program.md (114行)
-- 这是 karpathy/autoresearch 的 fork，上游有 35 个 commit
-- 项目不是 LLM 应用类项目（不调用 LLM API），但 program.md 是给 AI coding agent 的 prompt，prompt 分析章节适用
-- train.py 的模型基于 nanochat 精简而来
+- 全书 9 章均已完成并提交
+- 每章含质检报告
+- 同类对比：ch04（nanoGPT/nanochat 架构对比）、ch05（AdamW vs Muon 对比）
+- Prompt 分析：ch07（program.md 完整分析）
+- 项目演进史：ch08（35 个 commit 三阶段分析）
 
 ### 待验证项
-- Polar Express 系数的具体来源（论文引用）
-- NorMuon 的原始论文引用
-- Value Embedding 的 ResFormer 论文确切引用
+- Polar Express 系数的具体来源（论文引用）[需源码验证]
+- NorMuon 的原始论文引用 [需源码验证]
+- Value Embedding 的 ResFormer 论文确切引用 [需源码验证]
